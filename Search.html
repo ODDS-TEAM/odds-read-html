@@ -11,6 +11,7 @@
 <style>
     body {
         background-color: #1B1B1B;
+        color: white;
     }
 
     header {
@@ -24,6 +25,14 @@
         border-radius: 6px;
         border: 1px solid white; */
     }
+
+    .active-btn {
+        border-bottom : #6FA866 1px solid;
+    }
+
+    .inactive-btn {
+        color: #3D3D3D;
+     }
 </style>
 
 <body>
@@ -49,6 +58,26 @@
             </div>
         </div>
     </header>
+
+        <content>
+        <!-- [START] Content -->
+        <div class="d-flex justify-content-center  mt-4">
+            <div class="d-flex align-items-end justify-content-between justify-content-center col-6 col-md-6 col-xl-4">
+                <p class="active-btn">ISBN Search</p>
+                <p class="inactive-btn">Add ISBN</p>
+                <p class="inactive-btn">Show Detail</p>
+            </div>
+        </div>
+
+        <div class="content d-flex flex-column align-items-center">
+            <div class="d-flex col-10 col-md-10 col-xl-8 mb-5">
+
+            </div>
+        </div>
+
+        <!-- [END] Content -->
+    </content>
+
 </body>
 
 
