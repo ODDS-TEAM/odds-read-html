@@ -15,28 +15,30 @@
             color: white;
             font-family: Helvetica, sans-serif;
         }
-
-        header {
-            height: 100px;
+        
+        .header {
+            border-bottom: rgba(47, 47, 47, 0.5) 1px solid;
+            padding-bottom: 10px;
+            padding-top: 10px;
         }
-
+        
         .content .recommend-book .book-detail {
             background-color: #1B1B1B;
             box-shadow: 0px 2px 8px 4px black;
             border-radius: 10px;
         }
-
+        
         .content .recommend-book .book-detail .title {
             font-family: Helvetica, sans-serif;
             font-weight: 700;
         }
-
+        
         .content .recommend-book .book-detail .author-and-tags {
             font-family: Helvetica, sans-serif;
             font-weight: 400;
             color: #999999;
         }
-
+        
         .content .recommend-book .book-detail .author-and-tags .dot {
             width: 10px;
             height: 10px;
@@ -44,28 +46,28 @@
             display: inline-block;
             border-radius: 50%;
         }
-
+        
         .content .recommend-book .book-detail .separator {
             height: 2px;
             background-color: #8CD77E;
         }
-
+        
         .content .recommend-book .book-detail .description {
             text-indent: 30px;
             font-size: 17px;
             /* font-family: Arial, Helvetica, sans-serif; */
         }
-
+        
         .btn-custom-green {
             background-color: #8CD77E;
             border: none;
             font-weight: 500;
         }
-
+        
         .btn-custom-green:hover {
             background-color: rgb(120, 174, 135);
         }
-
+        
         .btn-custom-circle {
             border-radius: 50%;
             width: 36px;
@@ -74,56 +76,56 @@
             background-size: 20px 20px;
             background-position: center;
         }
-
+        
         .btn-clap {
             background-image: url('images/clap-icon.png');
         }
-
+        
         .btn-book {
             background-image: url('images/book-icon.png');
             background-size: 20px;
         }
-
+        
         .btn-thumb-down {
             background-image: url('images/thumb-down-icon.png');
             background-color: black;
             border: white 1px solid;
         }
-
+        
         .btn-custom-black {
             background-color: black;
             border: white 1px solid;
         }
-
+        
         .btn-custom-black:hover {
             background-color: #8CD77E;
         }
-
+        
         .btn-socialmedia {
             width: 31px;
             margin-left: 0.5rem;
             margin-right: 0.5rem;
         }
-
+        
         .page-footer .contact-btn {
             margin-bottom: 1.5rem;
         }
-
+        
         .page-footer .socialmedia,
         .slogan {
             margin-bottom: 2rem;
         }
-
+        
         .slogan {
             word-spacing: 1.75rem;
             font-size: 14px;
             font-weight: bold;
         }
-
+        
         .slogan a {
             color: #8CD77E;
         }
-
+        
         .tab-footer {
             width: 100%;
             height: 36px;
@@ -143,31 +145,28 @@
 </head>
 
 <body>
-    <header class="d-flex justify-content-between align-items-center mx-4">
-        <div class="logo">
-            <img src="images/odds-read-logo.png" width="100px" />
-        </div>
+    <header class="header">
+        <div class="d-flex justify-content-between align-items-center mx-5">
+            <div class="logo">
+                <img src="images/odds-read-logo.png" width="100px" />
+            </div>
 
-        <div class="menu d-flex">
-            <div class="input-group mr-2">
-                <input class="form-control py-2 border-right-0 border" type="search" value="Search">
-                <span class="input-group-append">
-                  <button class=" btn btn-outline-secondary border-left-0 border" type="button">
-                        <i class="fa fa-search"></i>
-                  </button>
-                </span>
-            </div>
-            <div class="mr-3 align-self-center">
-                <img src="images/cloud.png" width="30px" />
-            </div>
-            <div class="mr-3 align-self-center">
-                <img src="images/book.png" width="25px" />
-            </div>
-            <div class="mr-3 align-self-center">
-                <img src="images/noti.png" width="25px" />
-            </div>
-            <div class="mr-3 align-self-center">
-                <img src="images/profile.png" width="25px" />
+            <div class="menu d-flex">
+                <div>
+                    <input placeholder="Search" />
+                </div>
+                <div>
+                    <img src="images/cloud.png" width="50px" />
+                </div>
+                <div>
+                    <img src="images/book.png" width="40px" />
+                </div>
+                <div>
+                    <img src="images/noti.png" width="40px" />
+                </div>
+                <div>
+                    <img src="images/profile.png" width="40px" />
+                </div>
             </div>
         </div>
     </header>
