@@ -129,20 +129,13 @@
             background-color: #8CD77E;
         }
 
-        .has-search .form-control {
-            padding-left: 2.3rem;
+        .input-group .form-control {
+            height: auto;
+            background-color: black;
         }
 
-        .has-search .form-control-feedback {
-            position: absolute;
-            z-index: 2;
-            display: block;
-            width: 2.375rem;
-            height: 2.375rem;
-            line-height: 2.375rem;
-            text-align: center;
-            pointer-events: none;
-            color: #aaa;
+        .input-group .btn {
+            background-color: black;
         }
     </style>
 </head>
@@ -154,9 +147,13 @@
         </div>
 
         <div class="menu d-flex">
-            <div class="form-group has-search">
-                <span class="fa fa-search form-control-feedback"></span>
-                <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group">
+                <input class="form-control py-2 border-right-0 border" type="search" value="search">
+                <span class="input-group-append">
+                  <button class=" btn btn-outline-secondary border-left-0 border" type="button">
+                        <i class="fa fa-search"></i>
+                  </button>
+                </span>
             </div>
             <div>
                 <img src="images/cloud.png" width="50px" />
