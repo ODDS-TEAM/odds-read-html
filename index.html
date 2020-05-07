@@ -6,8 +6,8 @@
     </meta>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         body {
@@ -129,6 +129,16 @@
             height: 36px;
             background-color: #8CD77E;
         }
+
+        .input-group .form-control {
+            height: auto;
+            background-color: black;
+            font-size: 14px;
+        }
+
+        .input-group .btn {
+            background-color: black;
+        }
     </style>
 </head>
 
@@ -139,20 +149,25 @@
         </div>
 
         <div class="menu d-flex">
-            <div>
-                <input placeholder="Search" />
+            <div class="input-group mr-2">
+                <input class="form-control py-2 border-right-0 border" type="search" value="Search">
+                <span class="input-group-append">
+                  <button class=" btn btn-outline-secondary border-left-0 border" type="button">
+                        <i class="fa fa-search"></i>
+                  </button>
+                </span>
             </div>
-            <div>
-                <img src="images/cloud.png" width="50px" />
+            <div class="mr-3 align-self-center">
+                <img src="images/cloud.png" width="30px" />
             </div>
-            <div>
-                <img src="images/book.png" width="40px" />
+            <div class="mr-3 align-self-center">
+                <img src="images/book.png" width="25px" />
             </div>
-            <div>
-                <img src="images/noti.png" width="40px" />
+            <div class="mr-3 align-self-center">
+                <img src="images/noti.png" width="25px" />
             </div>
-            <div>
-                <img src="images/profile.png" width="40px" />
+            <div class="mr-3 align-self-center">
+                <img src="images/profile.png" width="25px" />
             </div>
         </div>
     </header>
@@ -230,10 +245,10 @@
                 </div>
             </div>
 
-            <div class="fiction-books col-10 col-md-10 col-xl-8">
+            <div class="fiction-books justify-content-center mb-4">
                 <h4 class="font-weight-bold mb-3">Fiction</h4>
 
-                <div class="books d-flex flex-wrap">
+                <div class="books d-flex ">
                     <img class="mr-4 mb-4" src="images/book_1.png" />
                     <img class="mr-4 mb-4" src="images/book_2.png" />
                     <img class="mr-4 mb-4" src="images/book_3.png" />
@@ -241,13 +256,13 @@
                     <img class="mr-4 mb-4" src="images/book_5.png" />
                 </div>
 
-                <div class="d-flex justify-content-end">More >></div>
+                <div class="d-flex justify-content-end mr-4">More >></div>
             </div>
 
-            <div class="fiction-books col-10">
+            <div class="fiction-books justify-content-center mb-4">
                 <h4 class="font-weight-bold mb-3">Fiction</h4>
 
-                <div class="books d-flex flex-wrap">
+                <div class="books d-flex ">
                     <img class="mr-4 mb-4" src="images/book_1.png" />
                     <img class="mr-4 mb-4" src="images/book_2.png" />
                     <img class="mr-4 mb-4" src="images/book_3.png" />
@@ -255,13 +270,13 @@
                     <img class="mr-4 mb-4" src="images/book_5.png" />
                 </div>
 
-                <div class="d-flex justify-content-end">More >></div>
+                <div class="d-flex justify-content-end mr-4">More >></div>
             </div>
 
-            <div class="fiction-books col-10">
+            <div class="fiction-books justify-content-center mb-4">
                 <h4 class="font-weight-bold mb-3">Fiction</h4>
 
-                <div class="books d-flex flex-wrap">
+                <div class="books d-flex ">
                     <img class="mr-4 mb-4" src="images/book_1.png" />
                     <img class="mr-4 mb-4" src="images/book_2.png" />
                     <img class="mr-4 mb-4" src="images/book_3.png" />
@@ -269,7 +284,7 @@
                     <img class="mr-4 mb-4" src="images/book_5.png" />
                 </div>
 
-                <div class="d-flex justify-content-end">More >></div>
+                <div class="d-flex justify-content-end mr-4">More >></div>
             </div>
         </div>
         <!-- [END] Content -->
