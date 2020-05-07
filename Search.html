@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <style>
     body {
@@ -61,17 +63,25 @@
 
         <content>
         <!-- [START] Content -->
-        <div class="d-flex justify-content-center  mt-4">
-            <div class="d-flex align-items-end justify-content-between justify-content-center col-6 col-md-6 col-xl-4">
-                <p class="active-btn">ISBN Search</p>
-                <p class="inactive-btn">Add ISBN</p>
-                <p class="inactive-btn">Show Detail</p>
+        <div class="d-flex flex-column mt-5">
+            <div class="d-flex justify-content-center">
+                <div class="d-flex align-items-end justify-content-between  col-6 col-md-6 col-xl-4">
+                    <p class="active-btn">ISBN Search</p>
+                    <p class="inactive-btn">Add ISBN</p>
+                    <p class="inactive-btn">Show Detail</p>
+                </div>
             </div>
-        </div>
-
-        <div class="content d-flex flex-column align-items-center">
-            <div class="d-flex col-10 col-md-10 col-xl-8 mb-5">
-
+            <div class="d-flex justify-content-center mt-3">
+                 <img src="images/isbn-search.png" width="150px" height="150px">
+            </div>
+             <div class="d-flex justify-content-center mt-3">
+                 <p>Use our search engine to find book information</p>
+            </div>
+             <div class="d-flex justify-content-center">
+                 <input class="search" placeholder="Search ISBN..." />
+                 <button class="btn ml-2" type="button" style="background-color:#8CD77F; width:80px">
+                        <i class="fa fa-search" style="color:white;"></i>
+                  </button>
             </div>
         </div>
 
