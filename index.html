@@ -13,28 +13,28 @@
             color: white;
             font-family: Helvetica, sans-serif;
         }
-
+        
         header {
             height: 100px;
         }
-
+        
         .content .recommend-book .book-detail {
             background-color: #1B1B1B;
             box-shadow: 0px 2px 8px 4px black;
             border-radius: 10px;
         }
-
+        
         .content .recommend-book .book-detail .title {
             font-family: Helvetica, sans-serif;
             font-weight: 700;
         }
-
+        
         .content .recommend-book .book-detail .author-and-tags {
             font-family: Helvetica, sans-serif;
             font-weight: 400;
             color: #999999;
         }
-
+        
         .content .recommend-book .book-detail .author-and-tags .dot {
             width: 10px;
             height: 10px;
@@ -42,28 +42,28 @@
             display: inline-block;
             border-radius: 50%;
         }
-
+        
         .content .recommend-book .book-detail .separator {
             height: 2px;
             background-color: #8CD77E;
         }
-
+        
         .content .recommend-book .book-detail .description {
             text-indent: 30px;
             font-size: 17px;
             /* font-family: Arial, Helvetica, sans-serif; */
         }
-
+        
         .btn-custom-green {
             background-color: #8CD77E;
             border: none;
             font-weight: 500;
         }
-
+        
         .btn-custom-green:hover {
             background-color: rgb(120, 174, 135);
         }
-
+        
         .btn-custom-circle {
             border-radius: 50%;
             width: 36px;
@@ -72,60 +72,91 @@
             background-size: 20px 20px;
             background-position: center;
         }
-
+        
         .btn-clap {
             background-image: url('images/clap-icon.png');
         }
-
+        
         .btn-book {
             background-image: url('images/book-icon.png');
             background-size: 20px;
         }
-
+        
         .btn-thumb-down {
             background-image: url('images/thumb-down-icon.png');
             background-color: black;
             border: white 1px solid;
         }
-
+        
         .btn-custom-black {
             background-color: black;
             border: white 1px solid;
         }
-
+        
         .btn-custom-black:hover {
             background-color: #8CD77E;
         }
-
+        
         .btn-socialmedia {
             width: 31px;
             margin-left: 0.5rem;
             margin-right: 0.5rem;
         }
-
+        
         .page-footer .contact-btn {
             margin-bottom: 1.5rem;
         }
-
+        
         .page-footer .socialmedia,
         .slogan {
             margin-bottom: 2rem;
         }
-
+        
         .slogan {
             word-spacing: 1.75rem;
             font-size: 14px;
             font-weight: bold;
         }
-
+        
         .slogan a {
             color: #8CD77E;
         }
-
+        
         .tab-footer {
             width: 100%;
             height: 36px;
             background-color: #8CD77E;
+        }
+        
+        .cloud-move {
+            height: 0;
+            position: relative;
+        }
+        
+        .cloud-1 {
+            transform: scale(0.8);
+            animation: moveclouds 35s linear infinite;
+        }
+        
+        .cloud-2 {
+            top: 200px;
+            transform: scale(0.4);
+            animation: moveclouds 25s linear infinite;
+        }
+        
+        .cloud-3 {
+            top: -200px;
+            transform: scale(0.6);
+            animation: moveclouds 15s linear infinite;
+        }
+        
+        @keyframes moveclouds {
+            0% {
+                margin-left: 100%;
+            }
+            100% {
+                margin-left: -100%;
+            }
         }
     </style>
 </head>
@@ -157,7 +188,14 @@
 
     <content>
         <!-- [START] Banner -->
+        <div>
+            <div class="cloud-move cloud-1"><img src="images/cloud-1.png"></div>
+            <div class="cloud-move cloud-2"><img src="images/cloud-2.png"></div>
+            <div class="cloud-move cloud-3"><img src="images/cloud-3.png"></div>
+        </div>
         <div class="banner d-flex">
+
+
             <div class="intro">
                 <img src="images/odd-read-wording.png" width="200px" />
                 <p>
