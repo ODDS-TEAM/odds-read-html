@@ -7,10 +7,13 @@
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <style>
     body {
         background-color: #1B1B1B;
+        color: white;
     }
 
     header {
@@ -24,6 +27,32 @@
         border-radius: 6px;
         border: 1px solid white; */
     }
+
+    .active-btn {
+        border-bottom : #6FA866 1px solid;
+        cursor:pointer;
+    }
+
+    .inactive-btn {
+        color: #3D3D3D;
+         cursor:pointer;
+     }
+
+     .search-input {
+        background-color:#1B1B1B;
+        width:15rem; 
+        color:white;
+        border: #6D6D6D 1px solid;
+     }
+
+     .search-btn {
+         background-color:#8CD77F; 
+         width:5rem;
+     }
+
+     .search-icon {
+         color:white;
+     }
 </style>
 
 <body>
@@ -49,6 +78,34 @@
             </div>
         </div>
     </header>
+
+        <content>
+        <!-- [START] Content -->
+        <div class="d-flex flex-column mt-5">
+            <div class="d-flex justify-content-center">
+                <div class="d-flex align-items-end justify-content-between  col-6 col-md-6 col-xl-4">
+                    <p class="active-btn">ISBN Search</p>
+                    <p class="inactive-btn">Add ISBN</p>
+                    <p class="inactive-btn">Show Detail</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                 <img src="images/isbn-search.png" width="120px" height="120px">
+            </div>
+             <div class="d-flex justify-content-center mt-5">
+                 <p>Use our search engine to find book information</p>
+            </div>
+             <div class="d-flex justify-content-center">
+                 <input class="form-control py-2 search-input" type="search" placeholder="Search ISBN...">
+                 <button class="btn ml-2 search-btn" type="button">
+                        <i class="fa fa-search search-icon"></i>
+                  </button>
+            </div>
+        </div>
+
+        <!-- [END] Content -->
+    </content>
+
 </body>
 
 
