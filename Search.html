@@ -30,11 +30,11 @@
 
     .active-btn {
         border-bottom : #6FA866 1px solid;
-        cursor:pointer;
+        color: white  !important;
     }
 
-    .inactive-btn {
-        color: #3D3D3D;
+    .topic-style {
+         color: #3D3D3D;
          cursor:pointer;
      }
 
@@ -52,6 +52,12 @@
 
      .search-icon {
          color:white;
+     }
+
+     .tabcontent {
+        display: none;
+        padding: 3rem;
+        text-align: center;
      }
 </style>
 
@@ -81,35 +87,60 @@
 
         <content>
         <!-- [START] Content -->
+
         <div class="d-flex flex-column mt-5">
             <div class="d-flex justify-content-center">
-                <div class="d-flex align-items-end justify-content-between  col-6 col-md-6 col-xl-4">
-                    <p class="active-btn">ISBN Search</p>
-                    <p class="inactive-btn">Add ISBN</p>
-                    <p class="inactive-btn">Show Detail</p>
+                <div id="topic" class="d-flex align-items-end justify-content-between  col-6 col-md-6 col-xl-4">
+                    <p class="topic-style active-btn" onclick="switchTopic(event,'searchISBN')" id="defaultOpen">ISBN Search</p>
+                    <p class="topic-style" onclick="switchTopic(event,'addISBN')">Add ISBN</p>
+                    <p class="topic-style" onclick="switchTopic(event,'showISBN')">Show Detail</p>
                 </div>
             </div>
-            <div class="d-flex justify-content-center mt-5">
-                 <img src="images/isbn-search.png" width="120px" height="120px">
+            <div id="searchISBN" class="tabcontent">
+                <div class="d-flex justify-content-center">
+                    <img src="images/isbn-search.png" width="120px" height="120px">
+                </div>
+                <div class="d-flex justify-content-center mt-5">
+                    <p>Use our search engine to find book information</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input class="form-control py-2 search-input" type="search" placeholder="Search ISBN...">
+                    <button class="btn ml-2 search-btn" type="button">
+                            <i class="fa fa-search search-icon"></i>
+                    </button>
+                </div>
             </div>
-             <div class="d-flex justify-content-center mt-5">
-                 <p>Use our search engine to find book information</p>
+            <div id="addISBN" class="tabcontent">
+                <p>addISBN</p>
             </div>
-             <div class="d-flex justify-content-center">
-                 <input class="form-control py-2 search-input" type="search" placeholder="Search ISBN...">
-                 <button class="btn ml-2 search-btn" type="button">
-                        <i class="fa fa-search search-icon"></i>
-                  </button>
+            <div id="showISBN" class="tabcontent">
+                <p>showISBN</p>
             </div>
         </div>
-
         <!-- [END] Content -->
     </content>
 
+
+    <script>
+
+
+    document.getElementById('defaultOpen').click();
+         
+    function switchTopic(evt, topic) {
+    var i, tabcontent, topicStyle;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    topicStyle = document.getElementsByClassName("topic-style");
+    for (i = 0; i < topicStyle.length; i++) {
+        topicStyle[i].className = topicStyle[i].className.replace(" active-btn", "");
+    }
+    document.getElementById(topic).style.display = "block";
+    evt.currentTarget.className += " active-btn";
+    }
+    </script>
+
 </body>
-
-
-
-
 
 </html>
