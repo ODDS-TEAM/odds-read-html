@@ -134,15 +134,63 @@
             height: 36px;
             background-color: #8CD77E;
         }
-
+        
+        .cloud-move {
+            height: 0;
+            position: relative;
+        }
+        
+        .cloud-1 {
+            transform: scale(0.8);
+            animation: moveclouds 90s linear infinite;
+        }
+        
+        .cloud-2 {
+            top: 200px;
+            transform: scale(0.4);
+            animation: moveclouds 60s linear infinite;
+        }
+        
+        .cloud-3 {
+            top: -200px;
+            transform: scale(0.6);
+            animation: moveclouds 45s linear infinite;
+        }
+        
+        @keyframes moveclouds {
+            0% {
+                margin-left: 100%;
+            }
+            100% {
+                margin-left: -100%;
+            }
+        }
+        
         .input-group .form-control {
             height: auto;
             background-color: black;
             font-size: 14px;
         }
-
+        
         .input-group .btn {
             background-color: black;
+        }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: transparent;
+            color: #fff;
+            display: block;
+        }
+        .fa-chevron-down {
+            position: absolute; 
+            bottom:10; 
+            right: 23%;
+            z-index: -1;
+        }
+        .select {
+            position: relative;
         }
     </style>
 </head>
@@ -169,43 +217,43 @@
             <div class="mr-3 align-self-center">
                 <img src="images/cloud.png" width="30px" />
             </div>
-
-            <div class="menu d-flex">
-                <div>
-                    <input placeholder="Search" />
-                </div>
-                <div>
-                    <img src="images/cloud.png" width="50px" />
-                </div>
-                <div>
-                    <img src="images/book.png" width="40px" />
-                </div>
-                <div>
-                    <img src="images/noti.png" width="40px" />
-                </div>
-                <div>
-                    <img src="images/profile.png" width="40px" />
-                </div>
+            <div class="mr-3 align-self-center">
+                <img src="images/book.png" width="25px" />
             </div>
+            <div class="mr-3 align-self-center">
+                <img src="images/noti.png" width="25px" />
+            </div>
+            <div class="mr-3 align-self-center">
+                <img src="images/profile.png" width="25px" />
+            </div>
+        </div>
         </div>
     </header>
 
     <content>
         <!-- [START] Banner -->
-        <div class="d-flex justify-content-center">
+        <div>
+            <div class="cloud-move cloud-1"><img src="images/cloud-1.png"></div>
+            <div class="cloud-move cloud-2"><img src="images/cloud-2.png"></div>
+            <div class="cloud-move cloud-3"><img src="images/cloud-3.png"></div>
+        </div>
+
+        <div class="d-flex justify-content-center pt-5">
             <div class="banner d-flex col-10 col-md-10 col-xl-8">
                 <div class="intro">
                     <img src="images/odd-read-wording.png" width="200px" />
                     <p>
-                        “Books are the quietest and most constant of friends; they are the most accessible and wisest of
-                        counsellors, and the most patient of teachers” by Charles William Eliot
+                        “Books are the quietest and most constant of friends; they are the most accessible and wisest of counsellors, and the most patient of teachers” by Charles William Eliot
                     </p>
                     <!-- Tag capsult? -->
-                    <select id="cars">
+                    <div class="select">
+                    <select id="cars" class="p-1 pr-5 pl-2">
                         <option selected disabled>Genres</option>
                         <option value="Romance">Romance</option>
                         <option value="Science Fiction ">Science Fiction </option>
                     </select>
+                    <i class="fa fa-chevron-down"></i>
+                    </div>
                 </div>
 
                 <div class="wormbook-image">
@@ -241,13 +289,8 @@
 
                     <div class="description mb-4">
                         <p>
-                            หนังสือถูกแต่งโดย จอร์จ ออเวล (George Orwell,1905-1950) ที่สะท้อนคิดวัฒนธรรมการเมือง
-                            ในประเทศรัสเซีย ผ่านสถานการณ์บรรดาสัตว์ต่าง ๆ ที่ปรากฏใน Animal Farm
-                            ที่ต่อสู้ปฏิวัติกับคนที่เป็นเจ้าของฟาร์ม พร้อมนำไปสู่การปฏิวัติและพัฒนา
-                            แต่ทุกอย่างเกิดขึ้นภายใต้
-                            “...การคอรัปชั่น เบี่ยงประเด็น พวกพ้อง ชนชั้น ผู้ปกครอง ผู้ถูกปกครอง ข่มขวัญ เสแสร้ง
-                            สร้างภาพ กดขี่ หลอกลวง ข่มขู่ หลอกใช้ เอารัดเอาเปรียบ ปั่นกระแส ปั้นเรื่อง แปลงสาร สาดโคลน
-                            ใส่ความ อุ้มฆ่า และตัดตอน ลับลวงพราง...” ซึ่งทั้งหมดเป็นเรื่องเล่าผ่านบรรดาสัตว์นานาชนิดใน
+                            หนังสือถูกแต่งโดย จอร์จ ออเวล (George Orwell,1905-1950) ที่สะท้อนคิดวัฒนธรรมการเมือง ในประเทศรัสเซีย ผ่านสถานการณ์บรรดาสัตว์ต่าง ๆ ที่ปรากฏใน Animal Farm ที่ต่อสู้ปฏิวัติกับคนที่เป็นเจ้าของฟาร์ม พร้อมนำไปสู่การปฏิวัติและพัฒนา แต่ทุกอย่างเกิดขึ้นภายใต้
+                            “...การคอรัปชั่น เบี่ยงประเด็น พวกพ้อง ชนชั้น ผู้ปกครอง ผู้ถูกปกครอง ข่มขวัญ เสแสร้ง สร้างภาพ กดขี่ หลอกลวง ข่มขู่ หลอกใช้ เอารัดเอาเปรียบ ปั่นกระแส ปั้นเรื่อง แปลงสาร สาดโคลน ใส่ความ อุ้มฆ่า และตัดตอน ลับลวงพราง...” ซึ่งทั้งหมดเป็นเรื่องเล่าผ่านบรรดาสัตว์นานาชนิดใน
                             Animal Farm
                         </p>
                     </div>
