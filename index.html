@@ -172,6 +172,23 @@
         .input-group .btn {
             background-color: black;
         }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: transparent;
+            color: #fff;
+            display: block;
+        }
+        .fa-chevron-down {
+            position: absolute; 
+            bottom:10; 
+            right: 23%;
+            z-index: -1;
+        }
+        .select {
+            position: relative;
+        }
     </style>
 </head>
 
@@ -222,11 +239,14 @@
                         “Books are the quietest and most constant of friends; they are the most accessible and wisest of counsellors, and the most patient of teachers” by Charles William Eliot
                     </p>
                     <!-- Tag capsult? -->
-                    <select id="cars">
+                    <div class="select">
+                    <select id="cars" class="p-1 pr-5 pl-2">
                         <option selected disabled>Genres</option>
                         <option value="Romance">Romance</option>
                         <option value="Science Fiction ">Science Fiction </option>
                     </select>
+                    <i class="fa fa-chevron-down"></i>
+                    </div>
                 </div>
 
                 <div class="wormbook-image">
