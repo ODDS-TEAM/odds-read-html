@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-            background-color: #1B1B1B;
+            background-color: rgb(27, 27, 27);
             color: white;
             font-family: Helvetica, sans-serif;
         }
@@ -23,10 +23,11 @@
             border-bottom: rgba(47, 47, 47, 0.5) 1px solid;
             padding-bottom: 10px;
             padding-top: 10px;
+            background-color: rgba(27, 27, 27, 0.8);
         }
         
         .content .recommend-book .book-detail {
-            background-color: #1B1B1B;
+            background-color:rgb(27, 27, 27);
             box-shadow: 0px 2px 8px 4px black;
             border-radius: 10px;
         }
@@ -138,6 +139,7 @@
         .cloud-move {
             height: 0;
             position: relative;
+            z-index: -1;
         }
         
         .cloud-1 {
@@ -196,15 +198,14 @@
 </head>
 
 <body>
-
-<!-- create paticles -->
-<div id="particles-js"></div> 
-<!-- end paticles -->
-    <header class="d-flex justify-content-between align-items-center mx-4">
+    <!-- create paticles -->
+    <div id="particles-js"></div> 
+    <!-- end paticles -->   
+    <header class="d-flex justify-content-between align-items-center px-4 mb-5">
         <div class="logo">
             <img src="images/odds-read-logo.png" width="100px" />
         </div>
-
+    
         <div class="menu d-flex">
             <div class="input-group mr-2">
                 <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search">
@@ -228,16 +229,17 @@
             </div>
         </div>
         </div>
+        </div>
     </header>
+
+    <div>
+        <div class="cloud-move cloud-1"><img src="images/cloud-1.png"></div>
+        <div class="cloud-move cloud-2"><img src="images/cloud-2.png"></div>
+        <div class="cloud-move cloud-3"><img src="images/cloud-3.png"></div>
+    </div>
 
     <content>
         <!-- [START] Banner -->
-        <div>
-            <div class="cloud-move cloud-1"><img src="images/cloud-1.png"></div>
-            <div class="cloud-move cloud-2"><img src="images/cloud-2.png"></div>
-            <div class="cloud-move cloud-3"><img src="images/cloud-3.png"></div>
-        </div>
-
         <div class="d-flex justify-content-center pt-5">
             <div class="banner d-flex col-10 col-md-10 col-xl-8">
                 <div class="intro">
