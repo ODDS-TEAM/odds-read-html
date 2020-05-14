@@ -3,7 +3,7 @@ particlesJS(
   {
     "particles":{
        "number":{
-          "value":180,
+          "value":40,
           "density":{
              "enable":false,
              "value_area":1815.039575754227
@@ -13,7 +13,7 @@ particlesJS(
           "value":"#ffffff"
        },
        "shape":{
-          "type":"star",
+          "type":"image",
           "stroke":{
              "width":0,
              "color":"#000000"
@@ -22,7 +22,7 @@ particlesJS(
              "nb_sides":5
           },
           "image":{
-             "src":"star.png",
+             "src":"images/star.png",
              "width":100,
              "height":100
           }
@@ -38,7 +38,7 @@ particlesJS(
           }
        },
        "size":{
-          "value":5,
+          "value":20,
           "random":true,
           "anim":{
              "enable":false,
@@ -57,7 +57,7 @@ particlesJS(
        "move":{
           "enable":true,
           "speed":1,
-          "direction":"bottom",
+          "direction":"top-right",
           "random":true,
           "straight":true,
           "out_mode":"out",
